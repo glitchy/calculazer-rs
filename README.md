@@ -9,10 +9,10 @@ control of your terminal and did not lose anything.
 This project is not yet complete as it only handles u8 inputs 
 intentionally for a particular use case I was working with.
 
-DEPENDENCIES:
+DEPENDENCIES:</br>
 (1) Lastest stable version of Rust. </br>
 
-INSTRUCTIONS:
+INSTRUCTIONS:</br>
 (1) Download repo.</br> 
 (2) Make terminal full screen.</br>
 (3) Run `cargo run` from the root directory.</br>
