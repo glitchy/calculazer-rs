@@ -4,7 +4,7 @@ A calculator using binary math (bitwise operations) written in Rust.
 To run properly make sure your terminal window is full screen 
 (Otherwise the ASCII art will be distorted). Also, the program 
 clears your terminal--SO DON'T PANIC! You still have full 
-control of your terminal and did not lose anything.
+control of your terminal.
 
 This project is not yet complete as it only handles u8 inputs 
 intentionally for a particular use case I was working with.
