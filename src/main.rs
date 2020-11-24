@@ -10,16 +10,16 @@ fn main() {
     format_results(total);
 }
 
-fn collect() -> i32 {
+fn collect() -> i32{
     println!("Please enter a unary number between 0-255:");
     let mut unary_input = String::new();
     io::stdin()
         .read_line(&mut unary_input)
         .expect("Invalid input, please start over.");
 
-    match unary_input.trim().parse::<i32>() {
+    match unary_input.trim().parse::<u8>() {
         Ok(unary_input) => {
-            return unary_input;
+            return unary_input as i32;
         }
         Err(e) => {
             eprintln!(
