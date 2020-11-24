@@ -10,14 +10,14 @@ fn main() {
     format_results(total);
 }
 
-fn collect() -> u8 {
+fn collect() -> i32 {
     println!("Please enter a unary number between 0-255:");
     let mut unary_input = String::new();
     io::stdin()
         .read_line(&mut unary_input)
         .expect("Invalid input, please start over.");
 
-    match unary_input.trim().parse::<u8>() {
+    match unary_input.trim().parse::<i32>() {
         Ok(unary_input) => {
             return unary_input;
         }
@@ -31,7 +31,7 @@ fn collect() -> u8 {
     }
 }
 
-fn operation(v1: u8, v2: u8) -> u8 {
+fn operation(v1: i32, v2: i32) -> i32 {
     println!("\nSelect operator:\n(+) addition\n(-) subtraction\n(*) multiplication\n(/) division");
     let mut operator_input = String::new();
     io::stdin()
@@ -59,7 +59,7 @@ fn operation(v1: u8, v2: u8) -> u8 {
     }
 }
 // just think connect 4 and all of this will make sense
-fn addition(mut v1: u8, mut v2: u8) -> u8 {
+fn addition(mut v1: i32, mut v2: i32) -> i32 {
     loop {
         if v1 == 0 {
             break;
@@ -74,7 +74,7 @@ fn addition(mut v1: u8, mut v2: u8) -> u8 {
     return v2;
 }
 
-fn subtraction(mut v1: u8, mut v2: u8) -> u8 {
+fn subtraction(mut v1: i32, mut v2: i32) -> i32 {
     // !!!--the short way--!!! //
     //return addition(v1, addition(!v2, 1));
 
@@ -93,7 +93,7 @@ fn subtraction(mut v1: u8, mut v2: u8) -> u8 {
     return v1;
 }
 
-fn multiplication(mut v1: u8, mut v2: u8) -> u8 {
+fn multiplication(mut v1: i32, mut v2: i32) -> i32 {
     let mut total = 0;
     let mut count = 0;
     loop {
@@ -110,7 +110,7 @@ fn multiplication(mut v1: u8, mut v2: u8) -> u8 {
     return total;
 }
 
-fn division(mut v1: u8, v2: u8) -> u8 {
+fn division(mut v1: i32, v2: i32) -> i32 {
     let mut sum = 0;
     loop {
         if v1 >= v2 {
@@ -123,10 +123,19 @@ fn division(mut v1: u8, v2: u8) -> u8 {
     return sum;
 }
 
-fn format_results(v: u8) {
-    println!("\nUnary total: {:?}", v);
-    println!("Binary total: {:#b}", v);
+fn format_results(v: i32) {
+    match v {
+        v if v < 0 && v >= -128 => {
+            println!("\nUnary total: {:?}", v);
+            println!("Binary total: {:#b}", v as i8);
+        },
+        _ => {
+            println!("\nUnary total: {:?}", v);
+            println!("Binary total: {:#b}", v);
+        }
+    }
 }
+
 fn welcome() {
     // Clears the screen.
     print!("{esc}[2J{esc}[1;1H", esc = 27 as char);
