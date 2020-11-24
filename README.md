@@ -2,7 +2,7 @@
 A calculator using binary math (bitwise operations) written in Rust.
 
 To run properly make sure your terminal window is full screen 
-(Otherwise the ASCII art will be distorted). Also, the program 
+(otherwise the ASCII art will be distorted). Also, the program 
 clears your terminal--SO DON'T PANIC! You still have full 
 control of your terminal.
 
