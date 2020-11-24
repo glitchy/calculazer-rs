@@ -10,12 +10,12 @@ This project is not yet complete as it only handles u8 inputs
 intentionally for a particular use case I was working with.
 
 DEPENDENCIES:
-(1) Lastest stable version of Rust. </n>
+(1) Lastest stable version of Rust. </br>
 
 INSTRUCTIONS:
-(1) Download repo.</n> 
-(2) Make terminal full screen.</n>
-(3) Run `cargo run` from the root directory.</n>
+(1) Download repo.</br> 
+(2) Make terminal full screen.</br>
+(3) Run `cargo run` from the root directory.</br>
 
 Hit `Ctrl-C` anytime to exit.
 
