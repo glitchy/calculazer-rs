@@ -10,7 +10,7 @@ fn main() {
     format_results(total);
 }
 
-fn collect() -> i32{
+fn collect() -> i32 {
     println!("Please enter a unary number between 0-255:");
     let mut unary_input = String::new();
     io::stdin()
