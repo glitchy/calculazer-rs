@@ -1,5 +1,5 @@
 # calculazer-rs
-A calculator using binary math (bitwise operations) written in Rust.
+A rusty calculator using bitwise operations.
 
 To run properly make sure your terminal window is full screen 
 (otherwise the ASCII art will be distorted). Also, the program 
